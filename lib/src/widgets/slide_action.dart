@@ -165,8 +165,7 @@ class IconSlideAction extends ClosableSlideAction {
       widgets.add(
         Flexible(
           child: new Icon(
-            icon,
-            color: foregroundColor ?? estimatedColor,
+            icon, color: Colors.white,
           ),
         ),
       );
@@ -181,13 +180,11 @@ class IconSlideAction extends ClosableSlideAction {
     if (caption != null) {
       widgets.add(
         Flexible(
-          child: Text(
-            caption,
-            overflow: TextOverflow.ellipsis,
-            style: Theme.of(context)
-                .primaryTextTheme
-                .caption
-                .copyWith(color: foregroundColor ?? estimatedColor),
+          child:Container(
+            margin: EdgeInsets.only(top: 10),
+          child: Text(caption, overflow: TextOverflow.ellipsis,
+            style: TextStyle(fontFamily: 'tt',color: Colors.white,fontSize: 15),
+          ),
           ),
         ),
       );
